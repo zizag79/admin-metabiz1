@@ -41,7 +41,7 @@
             class="mb-1 font-weight-bold"
             title-tag="h2"
           >
-            Welcome to Vuexy! 👋
+            Welcome to Metabiz! 👋
           </b-card-title>
           <b-card-text class="mb-2">
             Please sign-in to your account and start the adventure
@@ -282,6 +282,8 @@ export default {
             password: this.password,
           })
             .then(response => {
+                console.log(123, response);
+                return response;
               const { userData } = response.data
               useJwt.setToken(response.data.accessToken)
               useJwt.setRefreshToken(response.data.refreshToken)
